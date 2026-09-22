@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FlagMark from '../components/FlagMark.astro';
+import registry from '../data/coverage-registry.json';
+import { siteConfig } from '../data/site-config';
+
+const heroImage = 'https://commons.wikimedia.org/wiki/Special:Redirect/file/Abgestorbene_Akazien_%28Deadvlei%29.JPG?width=3840';
+
+const sections = [
+  { key: 'sovereign_state', title: 'Суверенные государства', description: '54 государства. От привычных направлений до тех, которым обычные справочники посвящают одну строчку.' },
+  { key: 'partially_recognised_entity', title: 'Частично признанные образования', description: 'Там, где международный статус сложнее визовой анкеты.' },
+  { key: 'disputed_territory', title: 'Спорные территории', description: 'Спор о территории не отменяет вопроса: кто и на каких условиях туда пускает.' },
+  { key: 'dependent_territory', title: 'Зависимые территории', description: 'Не государства, но со своими правилами доступа.' },
+  { key: 'overseas_territory', title: 'Заморские департаменты и владения', description: 'Часть другой страны — иногда только на карте. Правила въезда могут жить своей жизнью.' },
+  { key: 'european_african_territory', title: 'Европейские территории в Африке и у её побережья', description: 'Европа, которая географически оказалась в Африке или совсем рядом.' },
+  { key: 'special_region', title: 'Автономные и особые регионы', description: 'Когда одной страницы страны недостаточно.' },
+  { key: 'special_geographic_case', title: 'Особые географические случаи', description: 'Острова, пограничные аномалии и места, которые не помещаются в обычный каталог.' },
+] as const;
+---
+<BaseLayout home>
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero-media" src={heroImage} alt="" loading="eager" decoding="async" fetchpriority="high" referrerpolicy="no-referrer" />
+    <div class="hero-scrim"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="shell hero-inner">
+      <div class="hero-copy">
+        <p class="hero-kicker">Африка · въезд · документы · границы</p>
+        <h1 id="hero-title"><span>Как туда попасть?</span><em>Африка</em></h1>
+        <p class="hero-lede"><strong>Африка целиком. Один русскоязычный справочник.</strong> 54 государства, территории, острова и места, куда обычно никто толком не объясняет, как попасть.</p>
+      </div>
+      <a class="hero-scroll" href="#directions"><span>Смотреть направления</span><b aria-hidden="true">↓</b></a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="shell about-grid">
+      <div class="about-title">
+        <p class="eyebrow">О проекте</p>
+        <h2>Африка большая. Информация о въезде — не очень.</h2>
+      </div>
+      <div class="about-copy">
+        <p>У одной страны старый тариф. У другой мёртвый сайт. У третьей три списка документов, и все разные. Где-то правила поменялись, а памятка — нет. Где-то актуальную стоимость визы проще узнать у человека в консульстве, чем на сайте самого консульства.</p>
+        <p class="about-punch">Нас это не устроило.</p>
+        <p>Мы связались с официальными представителями государств и территорий Африки и собрали в одном месте то, что действительно нужно знать перед поездкой: правила въезда, визы, документы, сборы, сроки, ограничения и прочие вещи, которые желательно выяснить до встречи с пограничником.</p>
+        <p>Здесь есть частично признанные образования, спорные территории, заморские владения, автономные регионы, далёкие острова и географические случаи, которые обычные визовые справочники чаще всего просто пропускают.</p>
+        <p><strong>От Алжира до Бир-Тавиля.</strong> От обычного безвиза до мест, где сначала приходится выяснить, существует ли вообще процедура въезда.</p>
+        <p class="about-signoff">«Как туда попасть?» — проект авторов каналов <a href={siteConfig.authors[0].url} target="_blank" rel="noopener noreferrer"><strong>«{siteConfig.authors[0].name}»</strong></a> и <a href={siteConfig.authors[1].url} target="_blank" rel="noopener noreferrer"><strong>«{siteConfig.authors[1].name}»</strong></a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="directory shell" id="directions">
+    <div class="directory-intro">
+      <p class="eyebrow">Направления</p>
+      <div>
+        <h2>Выберите, куда собрались.</h2>
+        <p>Государства, территории, острова и всё остальное, что мы решили не оставлять за краем карты.</p>
+      </div>
+    </div>
+
+    {sections.map((section, index) => {
+      const items = registry.filter(item => item.type === section.key);
+      if (!items.length) return null;
+      return (
+        <section class="country-section" aria-labelledby={`section-${section.key}`}>
+          <header class="section-heading">
+            <div class="section-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
+            <div>
+              <h2 id={`section-${section.key}`}>{section.title}</h2>
+              <p>{section.description}</p>
+            </div>
+          </header>
+          <div class="country-grid">
+            {items.map(item => (
+              <a class="country-tile" href="#" aria-disabled="true" tabindex="-1" aria-label={`${item.name}: страница в разработке`}>
+                <FlagMark slug={item.slug} name={item.name} code={item.flagCode || item.iso2} />
+                <div class="country-tile__body">
+                  <span class="country-name">{item.name}</span>
+                  {item.parentJurisdiction && <span class="country-parent">{item.parentJurisdiction}</span>}
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      );
+    })}
+  </div>
+</BaseLayout>

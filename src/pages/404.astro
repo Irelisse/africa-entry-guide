@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="Страница не найдена">
+  <section class="destination-hero">
+    <div class="shell destination-shell">
+      <a class="back-link" href={base}>← На главную</a>
+      <div class="destination-main">
+        <p class="destination-type">Ошибка 404</p>
+        <h1>Такой страницы пока нет.</h1>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
