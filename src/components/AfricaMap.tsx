@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import mapPathsData from '../data/africa-map-paths.json';
-import { getFlagUrl } from '../utils/registry';
+import { getFlagUrl, isDestinationPublished } from '../utils/registry';
+
 
 interface MapPathItem {
   slug: string;
@@ -29,11 +30,13 @@ const ISLAND_NATIONS: IslandItem[] = [
 
 interface AfricaMapProps {
   onSelectCountry?: (slug: string, name: string) => void;
+  onOpenCountryPage?: (slug: string) => void;
   selectedSlug?: string | null;
 }
 
 export const AfricaMap: React.FC<AfricaMapProps> = ({
   onSelectCountry,
+  onOpenCountryPage,
   selectedSlug,
 }) => {
   const [hoveredCountry, setHoveredCountry] = useState<MapPathItem | IslandItem | null>(null);
@@ -51,6 +54,8 @@ export const AfricaMap: React.FC<AfricaMapProps> = ({
   const currentFlagUrl = hoveredCountry
     ? getFlagUrl(hoveredCountry.slug, (hoveredCountry as MapPathItem).flagCode || hoveredCountry.iso2)
     : undefined;
+
+  const isPublished = hoveredCountry ? isDestinationPublished(hoveredCountry.slug) : false;
 
   return (
     <div className="w-full my-6 bg-[#f7f3eb] rounded-2xl border border-[rgba(23,32,28,0.14)] p-3.5 sm:p-6 shadow-sm overflow-hidden">
@@ -101,9 +106,20 @@ export const AfricaMap: React.FC<AfricaMapProps> = ({
                     {hoveredCountry.iso2}
                   </span>
                 )}
-                <span className="text-[11px] text-[#b66243] hidden sm:inline ml-auto shrink-0">
-                  (нажмите для перехода)
-                </span>
+                {isPublished ? (
+                  <button
+                    type="button"
+                    onClick={() => onOpenCountryPage?.(hoveredCountry.slug)}
+                    className="btn-primary text-[11px] py-1 px-2.5 ml-auto shrink-0 shadow-xs"
+                  >
+                    <span>Открыть страницу</span>
+                    <span>→</span>
+                  </button>
+                ) : (
+                  <span className="text-[11px] text-[#b66243] hidden sm:inline ml-auto shrink-0">
+                    (нажмите для перехода в каталоге)
+                  </span>
+                )}
               </div>
             ) : (
               <span className="text-[#6a736d] italic text-xs truncate">
@@ -111,6 +127,7 @@ export const AfricaMap: React.FC<AfricaMapProps> = ({
               </span>
             )}
           </div>
+
 
           {/* Focused Continent SVG Canvas (viewBox 0 0 710 735) */}
           <div className="relative w-full aspect-[710/735] flex items-center justify-center">

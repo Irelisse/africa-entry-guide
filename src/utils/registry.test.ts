@@ -74,10 +74,15 @@ test('getFlagUrl handles remote custom flags, local flags and neutral entities',
   assert.equal(neutralFlag, undefined);
 });
 
-test('isDestinationPublished returns false when no countries are published', () => {
-  assert.equal(isDestinationPublished('uganda'), false);
+test('isDestinationPublished returns true for published top 5 countries', () => {
+  assert.equal(isDestinationPublished('gabon'), true);
+  assert.equal(isDestinationPublished('ghana'), true);
+  assert.equal(isDestinationPublished('kenya'), true);
+  assert.equal(isDestinationPublished('sao-tome-and-principe'), true);
+  assert.equal(isDestinationPublished('mauritius'), true);
   assert.equal(isDestinationPublished('algeria'), false);
 });
+
 
 
 

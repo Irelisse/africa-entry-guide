@@ -74,8 +74,15 @@ export const REMOTE_FLAGS: Record<string, string> = {
 export const NEUTRAL_SLUGS = new Set(['bir-tawil', 'abyei', 'halaib-triangle', 'western-sahara']);
 
 // Set of published country slugs that have active pages.
-// Ready to receive the 5 real countries.
-export const PUBLISHED_SLUGS = new Set<string>([]);
+// Live production countries: Gabon, Ghana, Kenya, São Tomé and Príncipe, Mauritius.
+export const PUBLISHED_SLUGS = new Set<string>([
+  'gabon',
+  'ghana',
+  'kenya',
+  'sao-tome-and-principe',
+  'mauritius',
+]);
+
 
 
 export function isDestinationPublished(slug: string): boolean {

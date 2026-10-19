@@ -151,8 +151,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectCountryPage }) => {
         {/* Visual Accent: Interactive Vector Map of Africa */}
         <AfricaMap
           onSelectCountry={handleSelectCountryFromMap}
+          onOpenCountryPage={onSelectCountryPage}
           selectedSlug={selectedCountrySlug}
         />
+
 
         {/* Sticky Filter & Search Bar - strictly fits mobile screen */}
         <div className="sticky top-0 z-20 backdrop-blur-md bg-[#eee8dd]/95 border-y border-[rgba(23,32,28,0.12)] py-3 px-3 -mx-4 sm:mx-0 sm:rounded-2xl sm:border shadow-sm mb-6 max-w-full">

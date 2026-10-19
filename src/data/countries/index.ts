@@ -1,17 +1,27 @@
 import type { CountryPageData } from '../../types/country-page';
 import registryData from '../coverage-registry.json';
-
 import mapPathsData from '../africa-map-paths.json';
 
-const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {};
+import { gabonData } from './gabon';
+import { ghanaData } from './ghana';
+import { kenyaData } from './kenya';
+import { saoTomeData } from './sao-tome-and-principe';
+import { mauritiusData } from './mauritius';
 
+const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {
+  gabon: gabonData,
+  ghana: ghanaData,
+  kenya: kenyaData,
+  'sao-tome-and-principe': saoTomeData,
+  mauritius: mauritiusData,
+};
 
 export function getCountryData(slug: string): CountryPageData | null {
   if (HARDCODED_COUNTRIES[slug]) {
     return HARDCODED_COUNTRIES[slug];
   }
 
-  // Generate clean, dignified placeholder skeleton from registry data
+  // Generate clean, dignified placeholder skeleton from registry data for unpublished countries
   const regItem = registryData.find((r) => r.slug === slug);
   if (!regItem) return null;
 
@@ -33,8 +43,8 @@ export function getCountryData(slug: string): CountryPageData | null {
       name: 'Информация уточняется',
     },
     coordinates: {
-      countryLat: mapItem ? Number((38.5 - (mapItem.cy / 800) * 74.5).toFixed(2)) : 0,
-      countryLon: mapItem ? Number((-26.5 + (mapItem.cx / 860) * 86.0).toFixed(2)) : 0,
+      countryLat: mapItem ? Number((38.0 - (mapItem.cy / 735) * 73.5).toFixed(2)) : 0,
+      countryLon: mapItem ? Number((-18.5 + (mapItem.cx / 710) * 71.0).toFixed(2)) : 0,
     },
     quickSummary: {
       visaStatusRu: 'Информация уточняется',
