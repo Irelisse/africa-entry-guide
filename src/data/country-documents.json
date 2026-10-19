@@ -1,0 +1,88 @@
+[
+  {
+    "countrySlug": "lesotho",
+    "countryName": "Лесото",
+    "iso2": "LS",
+    "sourceCategory": "Официальные правила посольства",
+    "documents": [
+      {
+        "title": "Правила въезда в Королевство Лесото",
+        "originalFileName": "THE KINGDOM OF LESOTHO revised 2.pdf",
+        "type": "pdf",
+        "description": "Официальные требования по визам, срокам действия паспорта и правилам въезда для граждан."
+      }
+    ]
+  },
+  {
+    "countrySlug": "ghana",
+    "countryName": "Гана",
+    "iso2": "GH",
+    "sourceCategory": "Консульские сборы и формы",
+    "documents": [
+      {
+        "title": "Тарифы консульских сборов Посольства Ганы",
+        "originalFileName": "VISA FEES_GHANA EMBASSY.pdf",
+        "type": "pdf",
+        "description": "Сетка официальных тарифов и сборов за оформление въездных и транзитных виз."
+      },
+      {
+        "title": "Визовая анкета Посольства Ганы",
+        "originalFileName": "Visa application form.pdf",
+        "type": "pdf",
+        "description": "Официальная анкета заявления на визу."
+      }
+    ]
+  },
+  {
+    "countrySlug": "uganda",
+    "countryName": "Уганда",
+    "iso2": "UG",
+    "sourceCategory": "Анкеты и памятки туриста",
+    "documents": [
+      {
+        "title": "Визовая анкета Уганды (на русском языке)",
+        "originalFileName": "UG Visaform RUS.doc",
+        "type": "doc",
+        "description": "Официальный формуляр заявления на получение визы с переводом граф на русский язык."
+      },
+      {
+        "title": "Визовая анкета Уганды (на английском языке)",
+        "originalFileName": "UG Visaform Eng.docx",
+        "type": "docx",
+        "description": "Оригинальный бланк анкеты Visa Application Form."
+      },
+      {
+        "title": "Требования к туристической визе Уганды",
+        "originalFileName": "TOURIST VISA REQUIREMENTS.docx",
+        "type": "docx",
+        "description": "Перечень документов, справок и условий для туристического въезда."
+      }
+    ]
+  },
+  {
+    "countrySlug": "angola",
+    "countryName": "Ангола",
+    "iso2": "AO",
+    "sourceCategory": "Законодательные акты и реквизиты",
+    "documents": [
+      {
+        "title": "Декрет об освобождении от виз (Isenção de Vistos)",
+        "originalFileName": "DR INSENCA0 DE VIST0S.pdf",
+        "type": "pdf",
+        "description": "Президентский декрет о безвизовом въезде/упрощении визового режима для ряда государств."
+      },
+      {
+        "title": "Банковские реквизиты посольства",
+        "originalFileName": "Numero de conta de embaixada-.pdf",
+        "type": "pdf",
+        "description": "Официальные банковские счета для оплаты консульских услуг и пошлин."
+      },
+      {
+        "title": "Соглашение об отмене виз",
+        "originalFileName": "VISAS SUPRESSION.doc",
+        "type": "doc",
+        "description": "Межправительственный документ о безвизовых поездках."
+      }
+    ]
+  }
+]

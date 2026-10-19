@@ -269,3 +269,55 @@ a{color:inherit;text-underline-offset:.2em}
   .hero-scroll{margin-top:18px}
   .country-name{font-size:15px}
 }
+
+.flag-mark--grayscale {
+  background: linear-gradient(145deg, #dfd8cb, #e8e2d5);
+}
+.flag-mark--grayscale img {
+  filter: grayscale(100%) contrast(0.92) opacity(0.82);
+}
+.country-tile[aria-disabled="true"] {
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+.country-tile[aria-disabled="true"]:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Button & Action Link High Contrast */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #17382f !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 12px;
+  padding: 10px 20px;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #244d41 !important;
+  color: #ffffff !important;
+}
+a.btn-primary, button.btn-primary {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+
+

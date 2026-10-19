@@ -1,0 +1,8 @@
+{
+  "name": "Как туда попасть? — Африка",
+  "description": "Большой русскоязычный справочник по въезду в страны, территории и особые географические случаи Африки.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
