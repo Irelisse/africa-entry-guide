@@ -10,7 +10,15 @@ export const mauritiusData: CountryPageData = {
   region: 'Восточная Африка',
   capital: 'Порт-Луи',
   heroImage: '/images/countries/mauritius.webp',
+  heroCaption: 'Полуостров и монолитная скала Ле-Морн-Брабан в бирюзовой лагуне',
+  criticalNotice: {
+    title: 'Санитарное ограничение по Эболе и форма All-in-One Form',
+    description:
+      'Иностранные граждане, побывавшие в ДР Конго, Уганде или Южном Судане в течение 21 дня до вылета, не допускаются к посадке на рейсы на Маврикий. До вылета все пассажиры обязаны заполнить цифровую форму здоровья All-in-One Form на safemauritius.govmu.org и предъявить QR-код при посадке.',
+    type: 'warning',
+  },
   currency: {
+
     code: 'MUR',
     name: 'Маврикийская рупия',
     symbol: '₨',
@@ -39,7 +47,9 @@ export const mauritiusData: CountryPageData = {
       id: 'visa-free-russia',
       name: 'Безвизовый въезд по двустороннему соглашению (Visa-Free)',
       routeType: 'visa_free',
+      priorityBadge: 'Безвизовый въезд до 60 дней',
       availableForRussianCitizens: true,
+
       purpose: 'Туризм, отдых, краткосрочный визит',
       maxStay: 'до 60 дней за поездку, но не более 90 дней в течение 180 дней',
       validity: 'в рамках лимита 90/180 дней',

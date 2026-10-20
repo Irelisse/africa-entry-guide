@@ -32,29 +32,29 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
           <img
             src={data.heroImage}
             alt={data.nameRu}
-            className="absolute inset-0 w-full h-full object-cover object-center filter saturate-95 brightness-90"
+            className="absolute inset-0 w-full h-full object-cover object-center filter saturate-105 contrast-[1.02]"
             loading="eager"
           />
-          {/* Editorial Double Scrim for maximum text contrast */}
+          {/* Luminous, cinematic editorial scrim: clear landscape view in center/right, smooth dark gradient on text left */}
           <div
-            className="absolute inset-0 z-0"
+            className="absolute inset-0 z-0 pointer-events-none"
             style={{
               background:
-                'linear-gradient(90deg, rgba(7, 16, 12, 0.94) 0%, rgba(7, 16, 12, 0.78) 55%, rgba(7, 16, 12, 0.45) 100%), linear-gradient(180deg, rgba(7, 16, 12, 0.4) 0%, rgba(7, 16, 12, 0.85) 100%)',
+                'linear-gradient(90deg, rgba(7, 16, 12, 0.88) 0%, rgba(7, 16, 12, 0.62) 42%, rgba(7, 16, 12, 0.20) 75%, rgba(7, 16, 12, 0.12) 100%), linear-gradient(180deg, rgba(7, 16, 12, 0.28) 0%, rgba(7, 16, 12, 0.05) 45%, rgba(7, 16, 12, 0.72) 100%)',
             }}
           />
         </>
       )}
 
       {/* Hero Content */}
-      <div className="relative z-10 shell max-w-5xl pt-7 pb-10 md:pt-10 md:pb-14">
+      <div className="relative z-10 shell max-w-5xl pt-7 pb-8 md:pt-10 md:pb-12">
         {/* Back Link with High Contrast */}
         <button
           type="button"
           onClick={onBack}
           className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition mb-6 cursor-pointer ${
             hasPhoto
-              ? 'text-[#dfb88d] hover:text-white bg-black/40 px-3 py-1.5 rounded-lg backdrop-blur-sm border border-white/15'
+              ? 'text-[#dfb88d] hover:text-white bg-black/45 px-3 py-1.5 rounded-lg backdrop-blur-md border border-white/20 shadow-xs'
               : 'text-[#17382f] hover:text-[#b66243]'
           }`}
         >
@@ -67,7 +67,7 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
           <div className="lg:col-span-7">
             {/* Flag Badge & Region Pill */}
             <div className="flex items-center gap-3 mb-4 flex-wrap">
-              <div className="w-12 h-8 rounded-lg overflow-hidden border border-white/20 bg-white shadow-xs flex items-center justify-center shrink-0">
+              <div className="w-12 h-8 rounded-lg overflow-hidden border border-white/30 bg-white shadow-sm flex items-center justify-center shrink-0">
                 {flagUrl ? (
                   <img
                     src={flagUrl}
@@ -83,7 +83,7 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
               <span
                 className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${
                   hasPhoto
-                    ? 'bg-[#dfb88d] text-[#12231c]'
+                    ? 'bg-[#dfb88d] text-[#12231c] shadow-xs'
                     : 'bg-[#17382f]/10 text-[#17382f]'
                 }`}
               >
@@ -93,7 +93,7 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
                 <span
                   className={`font-mono text-xs px-2.5 py-0.5 rounded-md ${
                     hasPhoto
-                      ? 'bg-black/40 text-white/90 border border-white/20'
+                      ? 'bg-black/45 text-white/95 border border-white/25 backdrop-blur-sm'
                       : 'bg-white border border-[rgba(23,32,28,0.12)] text-[#6a736d]'
                   }`}
                 >
@@ -105,14 +105,14 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
             {/* Country Names */}
             <h1
               className={`text-4xl sm:text-5xl md:text-6xl font-serif font-bold leading-[1.02] tracking-tight ${
-                hasPhoto ? 'text-[#fffdf8] drop-shadow-sm' : 'text-[#17201c]'
+                hasPhoto ? 'text-[#fffdf8] drop-shadow-md' : 'text-[#17201c]'
               }`}
             >
               {data.nameRu}
             </h1>
             <p
               className={`text-lg sm:text-xl font-serif italic mt-1 mb-6 ${
-                hasPhoto ? 'text-[#dfb88d]' : 'text-[#6a736d]'
+                hasPhoto ? 'text-[#dfb88d] drop-shadow-sm' : 'text-[#6a736d]'
               }`}
             >
               {data.nameEn}
@@ -122,18 +122,18 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
             <div
               className={`grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t text-xs ${
                 hasPhoto
-                  ? 'border-white/15'
+                  ? 'border-white/20'
                   : 'border-[rgba(23,32,28,0.1)]'
               }`}
             >
               <div
                 className={`p-2.5 rounded-xl ${
                   hasPhoto
-                    ? 'bg-black/35 backdrop-blur-sm border border-white/10'
+                    ? 'bg-black/40 backdrop-blur-md border border-white/15'
                     : 'bg-transparent'
                 }`}
               >
-                <span className={hasPhoto ? 'text-white/60 block mb-0.5' : 'text-[#6a736d] block mb-0.5'}>
+                <span className={hasPhoto ? 'text-white/70 block mb-0.5' : 'text-[#6a736d] block mb-0.5'}>
                   Столица
                 </span>
                 <strong className={`text-sm font-semibold block ${hasPhoto ? 'text-white' : 'text-[#17201c]'}`}>
@@ -143,11 +143,11 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
               <div
                 className={`p-2.5 rounded-xl ${
                   hasPhoto
-                    ? 'bg-black/35 backdrop-blur-sm border border-white/10'
+                    ? 'bg-black/40 backdrop-blur-md border border-white/15'
                     : 'bg-transparent'
                 }`}
               >
-                <span className={hasPhoto ? 'text-white/60 block mb-0.5' : 'text-[#6a736d] block mb-0.5'}>
+                <span className={hasPhoto ? 'text-white/70 block mb-0.5' : 'text-[#6a736d] block mb-0.5'}>
                   Валюта
                 </span>
                 <strong className={`text-sm font-semibold block ${hasPhoto ? 'text-white' : 'text-[#17201c]'}`}>
@@ -157,14 +157,14 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
               <div
                 className={`col-span-2 sm:col-span-1 p-2.5 rounded-xl ${
                   hasPhoto
-                    ? 'bg-black/35 backdrop-blur-sm border border-white/10'
+                    ? 'bg-black/40 backdrop-blur-md border border-white/15'
                     : 'bg-transparent'
                 }`}
               >
-                <span className={hasPhoto ? 'text-white/60 block mb-0.5' : 'text-[#6a736d] block mb-0.5'}>
+                <span className={hasPhoto ? 'text-white/70 block mb-0.5' : 'text-[#6a736d] block mb-0.5'}>
                   Координаты
                 </span>
-                <span className={`font-mono text-[11px] block ${hasPhoto ? 'text-white/80' : 'text-[#6a736d]'}`}>
+                <span className={`font-mono text-[11px] block ${hasPhoto ? 'text-white/85' : 'text-[#6a736d]'}`}>
                   {data.coordinates.countryLat.toFixed(2)}°, {data.coordinates.countryLon.toFixed(2)}°
                 </span>
               </div>
@@ -176,7 +176,7 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
             <div
               className={`relative w-64 sm:w-72 aspect-[710/735] rounded-2xl p-4 shadow-sm flex flex-col items-center ${
                 hasPhoto
-                  ? 'bg-black/45 backdrop-blur-md border border-white/20'
+                  ? 'bg-black/50 backdrop-blur-md border border-white/20'
                   : 'bg-[#eee8dd] border border-[rgba(23,32,28,0.12)]'
               }`}
             >
@@ -218,6 +218,16 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
             </div>
           </div>
         </div>
+
+        {/* Editorial Photo Location Caption */}
+        {hasPhoto && data.heroCaption && (
+          <div className="mt-5 pt-3 border-t border-white/10 flex justify-end">
+            <span className="inline-flex items-center gap-1.5 text-[11px] text-white/80 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/15 shadow-xs">
+              <span className="opacity-70">📷</span>
+              <span>{data.heroCaption}</span>
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );

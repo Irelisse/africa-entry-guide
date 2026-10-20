@@ -289,16 +289,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onSelectCountryPage }) => {
                           grayscale={false}
                         />
                         <div className="country-tile__body">
-                          <span className="country-name flex items-center justify-between">
-                            <span>{item.name}</span>
-                            <span className="text-[10px] text-emerald-800 font-semibold bg-emerald-100 px-1.5 py-0.5 rounded">
-                              готов
-                            </span>
-                          </span>
+                          <span className="country-name">{item.name}</span>
                           {item.parentJurisdiction && (
                             <span className="country-parent">{item.parentJurisdiction}</span>
                           )}
                         </div>
+
                       </a>
                     );
                   }

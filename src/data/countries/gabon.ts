@@ -10,7 +10,15 @@ export const gabonData: CountryPageData = {
   region: 'Центральная Африка',
   capital: 'Либревиль',
   heroImage: '/images/countries/gabon.webp',
+  heroCaption: 'Дождевые леса и водопады национального парка Ивиндо',
+  criticalNotice: {
+    title: 'Обязательные медицинские требования: ВИЧ-статус и жёлтая лихорадка',
+    description:
+      'Для въезда в Габон строго обязательны международный сертификат о вакцинации от жёлтой лихорадки и медицинская справка об отрицательном ВИЧ-тесте (HIV-negative) не старше 3 месяцев. Служба иммиграции в аэропорту Либревиля выборочно верифицирует бронь отеля звонком администратору.',
+    type: 'warning',
+  },
   currency: {
+
     code: 'XAF',
     name: 'Центральноафриканский франк КФА',
     symbol: 'FCFA',
@@ -39,7 +47,9 @@ export const gabonData: CountryPageData = {
       id: 'tourist-evisa',
       name: 'Туристическая электронная виза (Gabon eVisa)',
       routeType: 'evisa',
+      priorityBadge: 'Основной онлайн-маршрут (eVisa)',
       availableForRussianCitizens: true,
+
       purpose: 'Туризм, отдых, частный визит',
       maxStay: '1, 2 или 3 месяца (однократная) или 6 месяцев (многократная)',
       validity: '1–3 месяца (однократная) / 6 месяцев (мульти)',
@@ -69,7 +79,9 @@ export const gabonData: CountryPageData = {
       id: 'consular-tourist-visa-moscow',
       name: 'Консульская виза в Посольстве Габона в Москве',
       routeType: 'consular_visa',
+      priorityBadge: 'Подача через Посольство в Москве',
       availableForRussianCitizens: true,
+
       purpose: 'Туризм, посещение страны',
       maxStay: 'до 90 дней (3 месяца)',
       validity: 'до 90 дней',

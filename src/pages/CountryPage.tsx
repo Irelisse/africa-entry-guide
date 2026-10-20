@@ -74,7 +74,25 @@ export const CountryPage: React.FC<CountryPageProps> = ({ slug, onBack }) => {
         {/* 2. Level 1: Quick Entry Summary (10-second answer) */}
         <QuickEntrySummary data={data} />
 
+        {/* Critical Operational Notice (if country has special rules: insurance, ebola, hiv, etc.) */}
+        {data.criticalNotice && (
+          <div className="my-6 p-4 sm:p-5 rounded-2xl bg-amber-50/90 border border-amber-300 text-xs text-amber-950 flex items-start gap-3.5 shadow-xs">
+            <div className="w-8 h-8 rounded-xl bg-amber-200/90 text-amber-900 flex items-center justify-center shrink-0 font-bold text-base shadow-2xs">
+              ⚠️
+            </div>
+            <div className="min-w-0">
+              <strong className="font-serif font-bold text-sm sm:text-base text-amber-950 block mb-1">
+                {data.criticalNotice.title}
+              </strong>
+              <p className="leading-relaxed text-[#17201c]/90">
+                {data.criticalNotice.description}
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* 3. Entry Routes (Independent cards for each route) */}
+
         <section id="routes-section" className="my-8" aria-labelledby="routes-title">
           <div className="mb-4">
             <span className="text-[10px] uppercase font-bold tracking-widest text-[#b66243] block">

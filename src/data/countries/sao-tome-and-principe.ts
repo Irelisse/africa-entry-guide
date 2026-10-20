@@ -10,7 +10,15 @@ export const saoTomeData: CountryPageData = {
   region: 'Центральная Африка',
   capital: 'Сан-Томе',
   heroImage: '/images/countries/sao-tome-and-principe.webp',
+  heroCaption: 'Вулканический обелиск Пику-Кан-Гранде в экваториальном тумане',
+  criticalNotice: {
+    title: 'Туристический сбор в аэропорту и финансовый норматив',
+    description:
+      'В аэропорту взимается отдельный туристический сбор (€25 на Сан-Томе, €10 на острове Принсипи) наличными для туристов от 12 лет. Официальный норматив обеспечения составляет €100 в сутки на человека. Для перемещения между островами Сан-Томе и Принсипи отдельное разрешение не требуется.',
+    type: 'info',
+  },
   currency: {
+
     code: 'STN',
     name: 'Добра Сан-Томе и Принсипи',
     symbol: 'Db',
@@ -39,6 +47,7 @@ export const saoTomeData: CountryPageData = {
       id: 'visa-free-15-days',
       name: 'Безвизовый въезд до 15 дней (Visa-Free Regime)',
       routeType: 'visa_free',
+      priorityBadge: 'Безвизовый въезд (до 15 дней)',
       availableForRussianCitizens: true,
       purpose: 'Краткосрочный туризм, отдых, экскурсии',
       maxStay: 'до 15 дней на каждую поездку',
@@ -67,6 +76,7 @@ export const saoTomeData: CountryPageData = {
       id: 'tourist-visa-on-arrival-30-days',
       name: 'Туристическая виза по прибытии на 30 дней (Visa on Arrival)',
       routeType: 'visa_on_arrival',
+      priorityBadge: 'Виза по прибытии (€20 на 30 дней)',
       availableForRussianCitizens: true,
       purpose: 'Туризм на срок от 15 до 30 дней',
       maxStay: '30 дней',
@@ -93,7 +103,9 @@ export const saoTomeData: CountryPageData = {
       id: 'online-visa',
       name: 'Электронная виза / предварительное разрешение (e-Visa SMF)',
       routeType: 'evisa',
+      priorityBadge: 'Предварительное онлайн-согласование',
       availableForRussianCitizens: true,
+
       purpose: 'Предварительное согласование въезда',
       maxStay: 'до 3 месяцев (устанавливается в решении)',
       validity: 'до 180 дней (коридор въезда 90 дней)',

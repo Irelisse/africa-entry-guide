@@ -10,7 +10,15 @@ export const kenyaData: CountryPageData = {
   region: 'Восточная Африка',
   capital: 'Найроби',
   heroImage: '/images/countries/kenya.webp',
+  heroCaption: 'Саванна национального парка Амбосели с видом на гору Килиманджаро',
+  criticalNotice: {
+    title: 'Обязательное государственное страхование въезжающих (Inbound Health Insurance)',
+    description:
+      'В Кении действует требование обязательного въездного медицинского страхования для всех иностранных туристов (Mandatory Inbound Travel Health Insurance). Полис оформляется онлайн через правительственный сервис kenyacares.go.ke / eCitizen до вылета.',
+    type: 'warning',
+  },
   currency: {
+
     code: 'KES',
     name: 'Кенийский шиллинг',
     symbol: 'KSh',
@@ -39,7 +47,9 @@ export const kenyaData: CountryPageData = {
       id: 'standard-eta',
       name: 'Стандартное электронное разрешение (Standard eTA)',
       routeType: 'eta',
+      priorityBadge: 'Основной способ въезда (eTA)',
       availableForRussianCitizens: true,
+
       purpose: 'Туризм, отдых, посещение друзей и родственников',
       maxStay: 'до 90 дней (проставляется иммиграцией при въезде, продлевается)',
       validity: 'въезд в течение 90 дней с даты выдачи',

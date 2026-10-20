@@ -47,7 +47,9 @@ export interface EntryRoute {
   applyWhere: string;
   officialUrl?: string;
   format: 'electronic' | 'stamp' | 'sticker' | 'paper' | 'none';
+  priorityBadge?: string;
   allowedBorderCrossings?: string[];
+
   extensionAvailable?: boolean;
   extensionRules?: string;
   description?: string;
@@ -142,7 +144,14 @@ export interface CountryPageData {
   region: string;
   capital: string;
   heroImage?: string;
+  heroCaption?: string;
+  criticalNotice?: {
+    title: string;
+    description: string;
+    type?: 'warning' | 'info';
+  };
   currency: {
+
     code: string;
     name: string;
     symbol?: string;

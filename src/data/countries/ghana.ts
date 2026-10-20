@@ -10,7 +10,15 @@ export const ghanaData: CountryPageData = {
   region: 'Западная Африка',
   capital: 'Аккра',
   heroImage: '/images/countries/ghana.webp',
+  heroCaption: 'Исторический замок Кейп-Кост на побережье Гвинейского залива',
+  criticalNotice: {
+    title: 'Требования к загранпаспорту: 6 месяцев от выезда и 3 чистые страницы',
+    description:
+      'По регламенту туристической визы B2 загранпаспорт должен действовать не менее 6 месяцев именно от даты выезда из Ганы и иметь минимум 3 чистые страницы. Обязательны международный сертификат от жёлтой лихорадки и банковская выписка за 3 месяца.',
+    type: 'warning',
+  },
   currency: {
+
     code: 'GHS',
     name: 'Ганский седи',
     symbol: 'GH₵',
@@ -39,7 +47,9 @@ export const ghanaData: CountryPageData = {
       id: 'b2-tourist-evisa',
       name: 'Туристическая электронная виза B2 (Ghana Tourist eVisa)',
       routeType: 'evisa',
+      priorityBadge: 'Основной онлайн-маршрут (B2 eVisa)',
       availableForRussianCitizens: true,
+
       purpose: 'Туризм, отдых, краткосрочный визит',
       maxStay: 'до 60 дней (точный срок определяется иммиграционным офицером при въезде)',
       validity: '90 дней с момента выдачи',
@@ -70,7 +80,9 @@ export const ghanaData: CountryPageData = {
       id: 'moscow-consular-tourist-visa',
       name: 'Консульская виза в Посольстве Ганы в Москве',
       routeType: 'consular_visa',
+      priorityBadge: 'Подача через Посольство в Москве',
       availableForRussianCitizens: true,
+
       purpose: 'Туризм, частный визит',
       maxStay: 'до 60 дней (2 месяца)',
       validity: '3 месяца (однократная) или 6–12 месяцев (мульти)',
