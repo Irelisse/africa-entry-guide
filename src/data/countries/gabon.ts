@@ -240,7 +240,29 @@ export const gabonData: CountryPageData = {
     },
   ],
 
+  consularDocuments: [
+    {
+      id: 'gabon-visa-app',
+      title: 'Анкета на визу в Посольство Габона в Москве',
+      filename: 'gabon-visa-application-form.pdf',
+      url: '/documents/gabon/gabon-visa-application-form.pdf',
+      fileType: 'pdf',
+      fileSize: '151 КБ',
+      description: 'Официальный визовый формуляр Посольства Габонской Республики в Москве для консульской подачи.',
+    },
+    {
+      id: 'gabon-checklist',
+      title: 'Официальный список документов для турвизы',
+      filename: 'gabon-tourist-visa-checklist.pdf',
+      url: '/documents/gabon/gabon-tourist-visa-checklist.pdf',
+      fileType: 'pdf',
+      fileSize: '108 КБ',
+      description: 'Консульский регламент и перечень обязательных документов от Посольства Габона в Москве.',
+    },
+  ],
+
   travelAndStay: {
+
     returnTicketRequired: true,
     hotelBookingRequired: true,
     proofOfFundsRequired: true,

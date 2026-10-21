@@ -74,24 +74,30 @@ test('getFlagUrl handles remote custom flags, local flags and neutral entities',
   assert.equal(neutralFlag, undefined);
 });
 
-test('isDestinationPublished returns true for published top 5 countries', () => {
+test('isDestinationPublished returns true for published countries', () => {
   assert.equal(isDestinationPublished('gabon'), true);
   assert.equal(isDestinationPublished('ghana'), true);
   assert.equal(isDestinationPublished('kenya'), true);
   assert.equal(isDestinationPublished('sao-tome-and-principe'), true);
   assert.equal(isDestinationPublished('mauritius'), true);
-  assert.equal(isDestinationPublished('algeria'), false);
+  assert.equal(isDestinationPublished('guinea-bissau'), true);
+  assert.equal(isDestinationPublished('lesotho'), true);
+  assert.equal(isDestinationPublished('sierra-leone'), true);
+  assert.equal(isDestinationPublished('algeria'), true);
+  assert.equal(isDestinationPublished('senegal'), true);
+  assert.equal(isDestinationPublished('tunisia'), true);
+  assert.equal(isDestinationPublished('uganda'), true);
+  assert.equal(isDestinationPublished('equatorial-guinea'), true);
+  assert.equal(isDestinationPublished('somalia'), false);
 });
-
-
-
 
 test('getDestinationStats calculates counts correctly', () => {
   const stats = getDestinationStats(mockItems);
   assert.equal(stats.total, 3);
   assert.equal(stats.sovereign, 1);
   assert.equal(stats.territories, 2);
-  assert.equal(stats.published, 0);
+  // algeria in mockItems is now published
+  assert.equal(stats.published, 1);
 });
 
 test('groupDestinationsBySection groups items by matching sections', () => {

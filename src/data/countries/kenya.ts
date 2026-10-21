@@ -253,7 +253,20 @@ export const kenyaData: CountryPageData = {
     },
   ],
 
+  consularDocuments: [
+    {
+      id: 'kenya-entry-memo',
+      title: 'Официальная памятка по въезду в Кению для туриста из РФ',
+      filename: 'kenya-tourist-entry-memo.pdf',
+      url: '/documents/kenya/kenya-tourist-entry-memo.pdf',
+      fileType: 'pdf',
+      fileSize: '409 КБ',
+      description: 'Разъяснения Посольства Кении в Москве по заполнению eTA, медицинским сертификатам и пребыванию в стране.',
+    },
+  ],
+
   travelAndStay: {
+
     returnTicketRequired: true,
     hotelBookingRequired: true,
     proofOfFundsRequired: false,

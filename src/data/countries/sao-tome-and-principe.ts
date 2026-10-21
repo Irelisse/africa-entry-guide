@@ -235,7 +235,20 @@ export const saoTomeData: CountryPageData = {
     },
   ],
 
+  consularDocuments: [
+    {
+      id: 'sao-tome-decree',
+      title: 'Указ об освобождении от виз (Diário da República)',
+      filename: 'sao-tome-visa-waiver-decree.pdf',
+      url: '/documents/sao-tome-and-principe/sao-tome-visa-waiver-decree.pdf',
+      fileType: 'pdf',
+      fileSize: '969 КБ',
+      description: 'Официальный текст правительственного декрета Сан-Томе и Принсипи о безвизовом режиме до 15 дней для граждан РФ.',
+    },
+  ],
+
   travelAndStay: {
+
     returnTicketRequired: true,
     hotelBookingRequired: false,
     proofOfFundsRequired: true,

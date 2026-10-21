@@ -231,7 +231,29 @@ export const ghanaData: CountryPageData = {
     },
   ],
 
+  consularDocuments: [
+    {
+      id: 'ghana-fees',
+      title: 'Официальные тарифы визовых сборов Посольства Ганы',
+      filename: 'ghana-consular-visa-fees.pdf',
+      url: '/documents/ghana/ghana-consular-visa-fees.pdf',
+      fileType: 'pdf',
+      fileSize: '6.1 МБ',
+      description: 'Официальный регламент визовых сборов и условий срочности Посольства Ганы в Москве.',
+    },
+    {
+      id: 'ghana-app',
+      title: 'Анкета на получение визы в Гану (Word)',
+      filename: 'ghana-visa-application-form.docx',
+      url: '/documents/ghana/ghana-visa-application-form.docx',
+      fileType: 'docx',
+      fileSize: '157 КБ',
+      description: 'Редактируемый бланк анкеты Visa Application Form для заполнения и печати.',
+    },
+  ],
+
   travelAndStay: {
+
     returnTicketRequired: true,
     hotelBookingRequired: true,
     proofOfFundsRequired: true,

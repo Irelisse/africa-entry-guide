@@ -165,8 +165,12 @@ export const CountryPage: React.FC<CountryPageProps> = ({ slug, onBack }) => {
           {(activeTab === 'checklist' || activeTab === 'all') && (
             <div className="space-y-6 animate-fadeIn">
               <RequirementsChecklist data={data} />
-              <DocumentsSection documents={data.documents} />
+              <DocumentsSection
+                documents={data.documents}
+                consularDocuments={data.consularDocuments}
+              />
             </div>
+
           )}
 
           {/* Tab 2: Application Steps & Pre-Departure */}

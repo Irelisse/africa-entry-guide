@@ -7,6 +7,14 @@ import { ghanaData } from './ghana';
 import { kenyaData } from './kenya';
 import { saoTomeData } from './sao-tome-and-principe';
 import { mauritiusData } from './mauritius';
+import { guineaBissauData } from './guinea-bissau';
+import { lesothoData } from './lesotho';
+import { sierraLeoneData } from './sierra-leone';
+import { algeriaData } from './algeria';
+import { senegalData } from './senegal';
+import { tunisiaData } from './tunisia';
+import { ugandaData } from './uganda';
+import { equatorialGuineaData } from './equatorial-guinea';
 
 const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {
   gabon: gabonData,
@@ -14,6 +22,14 @@ const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {
   kenya: kenyaData,
   'sao-tome-and-principe': saoTomeData,
   mauritius: mauritiusData,
+  'guinea-bissau': guineaBissauData,
+  lesotho: lesothoData,
+  'sierra-leone': sierraLeoneData,
+  algeria: algeriaData,
+  senegal: senegalData,
+  tunisia: tunisiaData,
+  uganda: ugandaData,
+  'equatorial-guinea': equatorialGuineaData,
 };
 
 export function getCountryData(slug: string): CountryPageData | null {

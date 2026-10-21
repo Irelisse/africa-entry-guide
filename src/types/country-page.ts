@@ -68,7 +68,18 @@ export interface DocumentItem {
   note?: string;
 }
 
+export interface ConsularDocument {
+  id: string;
+  title: string;
+  filename: string;
+  url: string;
+  fileType: 'pdf' | 'docx' | 'doc';
+  fileSize?: string;
+  description?: string;
+}
+
 export interface HealthRules {
+
   yellowFever: {
     requiredDirectFromRussia: boolean;
     requiredFromRiskCountries: boolean;
@@ -207,7 +218,11 @@ export interface CountryPageData {
   // Documents
   documents: DocumentItem[];
 
+  // Downloadable official consular attachments (optional)
+  consularDocuments?: ConsularDocument[];
+
   // Travel logistics
+
   travelAndStay: {
     returnTicketRequired: boolean;
     onwardTicketAccepted?: boolean;

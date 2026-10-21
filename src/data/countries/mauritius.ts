@@ -192,7 +192,20 @@ export const mauritiusData: CountryPageData = {
     },
   ],
 
+  consularDocuments: [
+    {
+      id: 'mauritius-advisory',
+      title: 'Travel Advisory: Санитарный регламент и форма All-in-One',
+      filename: 'mauritius-travel-health-advisory.pdf',
+      url: '/documents/mauritius/mauritius-travel-health-advisory.pdf',
+      fileType: 'pdf',
+      fileSize: '253 КБ',
+      description: 'Официальный регламент Министерства здравоохранения и Службы гражданской авиации Маврикия.',
+    },
+  ],
+
   travelAndStay: {
+
     returnTicketRequired: true,
     hotelBookingRequired: true,
     proofOfFundsRequired: true,
