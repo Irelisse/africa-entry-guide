@@ -15,6 +15,7 @@ import { senegalData } from './senegal';
 import { tunisiaData } from './tunisia';
 import { ugandaData } from './uganda';
 import { equatorialGuineaData } from './equatorial-guinea';
+import { angolaData } from './angola';
 
 const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {
   gabon: gabonData,
@@ -30,6 +31,7 @@ const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {
   tunisia: tunisiaData,
   uganda: ugandaData,
   'equatorial-guinea': equatorialGuineaData,
+  angola: angolaData,
 };
 
 export function getCountryData(slug: string): CountryPageData | null {

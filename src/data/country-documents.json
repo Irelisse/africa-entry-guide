@@ -66,22 +66,22 @@
     "sourceCategory": "Законодательные акты и реквизиты",
     "documents": [
       {
-        "title": "Декрет об освобождении от виз (Isenção de Vistos)",
-        "originalFileName": "DR INSENCA0 DE VIST0S.pdf",
+        "title": "Президентский декрет № 189/23 об отмене виз",
+        "originalFileName": "angola-visa-waiver-decree.pdf",
         "type": "pdf",
-        "description": "Президентский декрет о безвизовом въезде/упрощении визового режима для ряда государств."
+        "description": "Официальный текст президентского указа о 30-дневном безвизовом въезде для граждан РФ."
       },
       {
         "title": "Банковские реквизиты посольства",
-        "originalFileName": "Numero de conta de embaixada-.pdf",
+        "originalFileName": "angola-embassy-bank-details.pdf",
         "type": "pdf",
-        "description": "Официальные банковские счета для оплаты консульских услуг и пошлин."
+        "description": "Официальные банковские счета для оплаты консульских сборов в Москве."
       },
       {
-        "title": "Соглашение об отмене виз",
-        "originalFileName": "VISAS SUPRESSION.doc",
-        "type": "doc",
-        "description": "Межправительственный документ о безвизовых поездках."
+        "title": "Регламент въезда и санитарных требований SME",
+        "originalFileName": "angola-consular-visa-requirements.pdf",
+        "type": "pdf",
+        "description": "Требования к паспорту, финансовому обеспечению и обязательной вакцинации от жёлтой лихорадки."
       }
     ]
   }

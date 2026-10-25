@@ -74,7 +74,7 @@ export const REMOTE_FLAGS: Record<string, string> = {
 export const NEUTRAL_SLUGS = new Set(['bir-tawil', 'abyei', 'halaib-triangle', 'western-sahara']);
 
 // Set of published country slugs that have active pages.
-// 13 live production countries with verified consular data and official documents.
+// 14 live production countries with verified consular data and official documents.
 export const PUBLISHED_SLUGS = new Set<string>([
   'gabon',
   'ghana',
@@ -89,6 +89,7 @@ export const PUBLISHED_SLUGS = new Set<string>([
   'tunisia',
   'uganda',
   'equatorial-guinea',
+  'angola',
 ]);
 
 

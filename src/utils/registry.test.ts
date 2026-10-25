@@ -88,6 +88,7 @@ test('isDestinationPublished returns true for published countries', () => {
   assert.equal(isDestinationPublished('tunisia'), true);
   assert.equal(isDestinationPublished('uganda'), true);
   assert.equal(isDestinationPublished('equatorial-guinea'), true);
+  assert.equal(isDestinationPublished('angola'), true);
   assert.equal(isDestinationPublished('somalia'), false);
 });
 
