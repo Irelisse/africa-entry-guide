@@ -98,7 +98,7 @@ export function isDestinationPublished(slug: string): boolean {
   return PUBLISHED_SLUGS.has(slug);
 }
 
-export function getFlagUrl(slug: string, code?: string, baseUrl: string = '/'): string | undefined {
+export function getFlagUrl(slug: string, code?: string, baseUrl?: string): string | undefined {
   if (NEUTRAL_SLUGS.has(slug)) {
     return undefined;
   }
@@ -108,7 +108,12 @@ export function getFlagUrl(slug: string, code?: string, baseUrl: string = '/'): 
   if (code) {
     const upper = code.toUpperCase();
     if (!['AC', 'TA', 'IC', 'EA'].includes(upper)) {
-      const cleanBase = baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
+      const base =
+        baseUrl ??
+        (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL
+          ? import.meta.env.BASE_URL
+          : './');
+      const cleanBase = base.endsWith('/') ? base : `${base}/`;
       return `${cleanBase}flags/${code.toLowerCase()}.png`;
     }
   }

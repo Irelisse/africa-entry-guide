@@ -68,7 +68,10 @@ test('getFlagUrl handles remote custom flags, local flags and neutral entities',
   assert.match(somalilandFlag || '', /Flag_of_Somaliland\.svg/);
 
   const algeriaFlag = getFlagUrl('algeria', 'DZ');
-  assert.equal(algeriaFlag, '/flags/dz.png');
+  assert.equal(algeriaFlag, './flags/dz.png');
+
+  const customBaseFlag = getFlagUrl('algeria', 'DZ', '/custom/');
+  assert.equal(customBaseFlag, '/custom/flags/dz.png');
 
   const neutralFlag = getFlagUrl('bir-tawil');
   assert.equal(neutralFlag, undefined);

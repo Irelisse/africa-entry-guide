@@ -5,9 +5,10 @@ import registryData from '../data/coverage-registry.json';
 import { siteConfig } from '../data/site-config';
 import { SECTIONS, filterDestinations, isDestinationPublished } from '../utils/registry';
 import type { DestinationItem } from '../utils/registry';
+import { resolveAssetUrl } from '../utils/assets';
 
 // Using local, highly-optimized WebP photo
-const heroImage = '/images/deadvlei.webp';
+const heroImage = resolveAssetUrl('/images/deadvlei.webp');
 
 interface HomePageProps {
   onSelectCountryPage?: (slug: string) => void;

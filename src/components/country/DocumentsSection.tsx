@@ -1,5 +1,6 @@
 import React from 'react';
 import type { DocumentItem, ConsularDocument } from '../../types/country-page';
+import { resolveAssetUrl } from '../../utils/assets';
 
 interface DocumentsSectionProps {
   documents: DocumentItem[];
@@ -86,7 +87,7 @@ export const DocumentsSection: React.FC<DocumentsSectionProps> = ({
                     </span>
                   )}
                   <a
-                    href={file.url}
+                    href={resolveAssetUrl(file.url)}
                     download={file.filename}
                     className="btn-primary text-xs py-1.5 px-3 ml-auto shadow-2xs inline-flex items-center gap-1.5"
                   >

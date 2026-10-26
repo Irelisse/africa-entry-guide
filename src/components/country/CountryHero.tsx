@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { CountryPageData } from '../../types/country-page';
 import { getFlagUrl } from '../../utils/registry';
+import { resolveAssetUrl } from '../../utils/assets';
 import mapPathsData from '../../data/africa-map-paths.json';
 
 interface CountryHeroProps {
@@ -9,7 +10,9 @@ interface CountryHeroProps {
 }
 
 export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
-  const flagUrl = getFlagUrl(data.slug, data.flagCode || data.iso2);
+  const [flagFailed, setFlagFailed] = useState(false);
+  const rawFlagUrl = getFlagUrl(data.slug, data.flagCode || data.iso2);
+  const flagUrl = resolveAssetUrl(rawFlagUrl);
 
   // Find country path on Africa map for locator highlight
   const mapItem = (mapPathsData as Array<{ slug: string; d: string; cx: number; cy: number }>).find(
@@ -17,6 +20,7 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
   );
 
   const hasPhoto = Boolean(data.heroImage);
+  const heroImageUrl = resolveAssetUrl(data.heroImage);
 
   return (
     <div
@@ -27,10 +31,10 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
       }`}
     >
       {/* Background Hero Photo (if available) */}
-      {hasPhoto && (
+      {hasPhoto && heroImageUrl && (
         <>
           <img
-            src={data.heroImage}
+            src={heroImageUrl}
             alt={data.nameRu}
             className="absolute inset-0 w-full h-full object-cover object-center filter saturate-105 contrast-[1.02]"
             loading="eager"
@@ -68,11 +72,12 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
             {/* Flag Badge & Region Pill */}
             <div className="flex items-center gap-3 mb-4 flex-wrap">
               <div className="w-12 h-8 rounded-lg overflow-hidden border border-white/30 bg-white shadow-sm flex items-center justify-center shrink-0">
-                {flagUrl ? (
+                {flagUrl && !flagFailed ? (
                   <img
                     src={flagUrl}
                     alt={`Флаг: ${data.nameRu}`}
                     className="w-full h-full object-cover"
+                    onError={() => setFlagFailed(true)}
                   />
                 ) : (
                   <span className="font-mono text-xs font-bold text-[#17382f]">
