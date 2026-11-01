@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/site-config';
+import { ThemeToggle } from './ThemeToggle';
 
 interface HeaderProps {
   overlay?: boolean;
@@ -36,14 +37,17 @@ export const Header: React.FC<HeaderProps> = ({ overlay = false }) => {
             <small>{siteConfig.edition}</small>
           </span>
         </a>
-        <nav className="header-nav" aria-label="Основная навигация">
-          <a href="#about" onClick={handleNavClick('about')}>
-            О проекте
-          </a>
-          <a href="#directions" onClick={handleNavClick('directions')}>
-            Направления
-          </a>
-        </nav>
+        <div className="header-actions flex items-center gap-3 sm:gap-6">
+          <nav className="header-nav" aria-label="Основная навигация">
+            <a href="#about" onClick={handleNavClick('about')}>
+              О проекте
+            </a>
+            <a href="#directions" onClick={handleNavClick('directions')}>
+              Направления
+            </a>
+          </nav>
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

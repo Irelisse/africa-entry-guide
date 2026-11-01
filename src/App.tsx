@@ -3,8 +3,17 @@ import { Header } from './components/Header';
 import { HomePage } from './pages/HomePage';
 import { CountryPage } from './pages/CountryPage';
 import { siteConfig } from './data/site-config';
+import { ThemeProvider } from './context/ThemeContext';
 
 export default function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
+
+function AppContent() {
   const [currentCountrySlug, setCurrentCountrySlug] = useState<string | null>(null);
 
   useEffect(() => {

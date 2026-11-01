@@ -6,6 +6,7 @@
   --ink:#17201c;
   --muted:#6a736d;
   --line:rgba(23,32,28,.14);
+  --line-strong:rgba(23,32,28,.24);
   --green:#17382f;
   --green-2:#22483d;
   --green-3:#0f2a23;
@@ -19,10 +20,31 @@
   color:var(--ink);
   background:var(--paper);
   line-height:1.55;
+  transition:background-color .2s ease,color .2s ease;
+}
+
+:root.dark,
+html.dark{
+  color-scheme:dark;
+  --paper:#0c1310;
+  --paper-2:#111b16;
+  --surface:#15221b;
+  --surface-strong:#1c2c24;
+  --ink:#eee8dc;
+  --muted:#99a69e;
+  --line:rgba(238,232,220,.12);
+  --line-strong:rgba(238,232,220,.22);
+  --green:#52a88e;
+  --green-2:#6ec0a6;
+  --green-3:#101a15;
+  --terracotta:#e68567;
+  --sand:#dfb88d;
+  --focus:#e68567;
+  --shadow:0 18px 50px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:var(--paper)}
-body{margin:0;background:var(--paper);color:var(--ink);text-rendering:optimizeLegibility}
+body{margin:0;background:var(--paper);color:var(--ink);text-rendering:optimizeLegibility;transition:background-color .2s ease,color .2s ease}
 img{display:block;max-width:100%}
 a{color:inherit;text-underline-offset:.2em}
 .shell{width:min(1280px,calc(100% - 48px));margin-inline:auto}
@@ -318,6 +340,181 @@ a.btn-primary, button.btn-primary {
   color: #ffffff !important;
   text-decoration: none !important;
 }
+
+/* ==========================================================
+   Dark Theme (Ночной режим) Component & Visual Overrides
+   ========================================================== */
+html.dark .site-header {
+  background: rgba(12, 19, 16, 0.94);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+}
+
+html.dark .site-header--overlay {
+  background: linear-gradient(180deg, rgba(4, 9, 7, 0.76), rgba(4, 9, 7, 0));
+  border-bottom: 0;
+  color: #fff;
+}
+
+html.dark .about {
+  background: var(--paper);
+}
+
+html.dark .about-copy {
+  color: #c9d2cc;
+}
+
+html.dark .about-punch {
+  color: #6ec0a6;
+}
+
+html.dark .country-tile {
+  background: rgba(21, 34, 27, 0.82);
+  border-color: rgba(238, 232, 220, 0.12);
+}
+
+html.dark .country-tile:hover {
+  background: var(--surface-strong);
+  border-color: rgba(82, 168, 142, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+html.dark .country-name {
+  color: #eee8dc;
+}
+
+html.dark .flag-mark {
+  background: linear-gradient(145deg, #17241e, #111a15);
+  border-bottom-color: rgba(238, 232, 220, 0.08);
+}
+
+html.dark .flag-mark--grayscale {
+  background: linear-gradient(145deg, #16221c, #101814);
+}
+
+html.dark .site-footer {
+  background: #080e0b;
+  border-top: 1px solid var(--line);
+}
+
+/* Surfaces and Cards */
+html.dark .bg-\[\#fffdf8\],
+html.dark .bg-white {
+  background-color: var(--surface) !important;
+  color: var(--ink) !important;
+}
+
+html.dark .bg-\[\#f7f3eb\] {
+  background-color: var(--surface-strong) !important;
+  color: var(--ink) !important;
+}
+
+html.dark .bg-\[\#eee8dd\],
+html.dark .bg-\[\#eee8dd\]\/95 {
+  background-color: rgba(17, 27, 22, 0.95) !important;
+}
+
+html.dark .bg-white\/80 {
+  background-color: rgba(26, 40, 33, 0.85) !important;
+  color: var(--ink) !important;
+}
+
+/* Text & Typography */
+html.dark .text-\[\#17201c\],
+html.dark .text-\[\#17201c\]\/85 {
+  color: var(--ink) !important;
+}
+
+html.dark .text-\[\#6a736d\] {
+  color: var(--muted) !important;
+}
+
+html.dark .text-\[\#17382f\] {
+  color: #dfb88d !important;
+}
+
+/* Borders */
+html.dark .border-\[rgba\(23\,32\,28\,0\.14\)\],
+html.dark .border-\[rgba\(23\,32\,28\,0\.16\)\],
+html.dark .border-\[rgba\(23\,32\,28\,0\.12\)\],
+html.dark .border-\[rgba\(23\,32\,28\,0\.1\) \],
+html.dark .border-\[rgba\(23\,32\,28\,0\.08\)\],
+html.dark .border-\[rgba\(23\,32\,28\,0\.06\)\],
+html.dark .border-\[rgba\(23\,32\,28\,0\.2\)\] {
+  border-color: var(--line) !important;
+}
+
+/* Search input & category select */
+html.dark input[type="text"] {
+  background-color: #15221b !important;
+  color: #eee8dc !important;
+  border-color: rgba(238, 232, 220, 0.16) !important;
+}
+html.dark input[type="text"]::placeholder {
+  color: #8c9890 !important;
+}
+
+html.dark select {
+  background-color: #15221b !important;
+  color: #eee8dc !important;
+  border-color: rgba(238, 232, 220, 0.16) !important;
+}
+
+/* Buttons in Dark Theme */
+html.dark .btn-primary {
+  background-color: #276251 !important;
+  color: #ffffff !important;
+}
+html.dark .btn-primary:hover {
+  background-color: #337a66 !important;
+}
+
+/* Badges & Tags */
+html.dark .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.18) !important;
+  color: #a7f3d0 !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+html.dark .bg-amber-100 {
+  background-color: rgba(245, 158, 11, 0.18) !important;
+  color: #fde68a !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+html.dark .bg-rose-100 {
+  background-color: rgba(244, 63, 94, 0.18) !important;
+  color: #fecdd3 !important;
+  border-color: rgba(244, 63, 94, 0.35) !important;
+}
+html.dark .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.18) !important;
+  color: #bfdbfe !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+}
+html.dark .bg-sky-100 {
+  background-color: rgba(14, 165, 233, 0.18) !important;
+  color: #bae6fd !important;
+  border-color: rgba(14, 165, 233, 0.35) !important;
+}
+html.dark .bg-gray-100 {
+  background-color: rgba(156, 163, 175, 0.15) !important;
+  color: #d1d5db !important;
+  border-color: rgba(156, 163, 175, 0.25) !important;
+}
+
+html.dark .divide-\[rgba\(23\,32\,28\,0\.08\)\] > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--line) !important;
+}
+
+/* Interactive Map in Dark Mode */
+html.dark svg path[id^="map-country-"] {
+  fill: #1e2c24;
+  stroke: #101914;
+}
+html.dark svg path[id^="map-country-"]:hover {
+  fill: #396d5d !important;
+  stroke: #dfb88d !important;
+}
+
 
 
 
