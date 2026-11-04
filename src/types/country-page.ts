@@ -4,6 +4,9 @@
  * a calm, editorial, premium travel interface.
  */
 
+export type KnownBoolean = boolean | null;
+export type PublicationState = 'research' | 'needs_field_qa' | 'ready_for_technical_qa' | 'production_ready';
+
 export type RequirementState =
   | 'required'
   | 'not_required'
@@ -30,7 +33,7 @@ export interface EntryRoute {
   id: string;
   name: string;
   routeType: RouteType;
-  availableForRussianCitizens: boolean;
+  availableForRussianCitizens: KnownBoolean;
   purpose: string;
   maxStay: string;
   validity: string;
@@ -81,14 +84,14 @@ export interface ConsularDocument {
 export interface HealthRules {
 
   yellowFever: {
-    requiredDirectFromRussia: boolean;
-    requiredFromRiskCountries: boolean;
+    requiredDirectFromRussia: KnownBoolean;
+    requiredFromRiskCountries: KnownBoolean;
     transitThresholdHours?: number;
     airportTransitExemption?: boolean;
     certificateValidityYears?: string;
     note?: string;
   };
-  medicalInsuranceRequired: boolean;
+  medicalInsuranceRequired: KnownBoolean;
   insuranceMinCoverage?: string;
   otherVaccinesRecommended?: string[];
   healthDeclarationRequired?: boolean;
@@ -105,10 +108,10 @@ export interface BorderRules {
 }
 
 export interface PostEntryRules {
-  registrationRequired: boolean;
+  registrationRequired: KnownBoolean;
   registrationDeadlineDays?: number;
   registrationAuthority?: string;
-  extensionPossible: boolean;
+  extensionPossible: KnownBoolean;
   extensionMaxDuration?: string;
   extensionCost?: string;
   restrictedAreas?: string[];
@@ -116,8 +119,8 @@ export interface PostEntryRules {
 }
 
 export interface TransitRules {
-  visaRequired: boolean;
-  airsideTransitAllowed: boolean;
+  visaRequired: KnownBoolean;
+  airsideTransitAllowed: KnownBoolean;
   maxAirsideTransitHours?: number;
   landsideTransitAllowed?: boolean;
   leavingAirportAllowed?: boolean;
@@ -146,6 +149,8 @@ export interface OfficialSource {
 }
 
 export interface CountryPageData {
+  publicationState?: PublicationState;
+  editorialSections?: Array<{ number: number; title: string; body: string }>;
   slug: string;
   nameRu: string;
   nameEn: string;
@@ -201,9 +206,9 @@ export interface CountryPageData {
   passport: {
     validityRequirement: string;
     validityFrom: 'entry_date' | 'exit_date' | 'visa_issuance' | 'unknown';
-    blankPagesRequired: number;
-    biometricOnly: boolean;
-    retainedByEmbassy: boolean;
+    blankPagesRequired: number | null;
+    biometricOnly: KnownBoolean;
+    retainedByEmbassy: KnownBoolean;
     note?: string;
   };
 
@@ -224,12 +229,12 @@ export interface CountryPageData {
   // Travel logistics
 
   travelAndStay: {
-    returnTicketRequired: boolean;
+    returnTicketRequired: KnownBoolean;
     onwardTicketAccepted?: boolean;
-    hotelBookingRequired: boolean;
-    proofOfFundsRequired: boolean;
+    hotelBookingRequired: KnownBoolean;
+    proofOfFundsRequired: KnownBoolean;
     fundsPerDayOrTotal?: string;
-    invitationRequired: boolean;
+    invitationRequired: KnownBoolean;
     notes?: string;
   };
 

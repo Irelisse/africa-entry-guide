@@ -8,7 +8,7 @@ interface QuickEntrySummaryProps {
 export const QuickEntrySummary: React.FC<QuickEntrySummaryProps> = ({ data }) => {
   const { quickSummary } = data;
 
-  const isConfirmed = quickSummary.confidence === 'confirmed';
+  const isConfirmed = quickSummary.confidence === 'confirmed' || (data.publicationState === 'ready_for_technical_qa' || data.publicationState === 'production_ready');
 
   return (
     <section className="my-8" aria-labelledby="quick-summary-title">
@@ -30,7 +30,7 @@ export const QuickEntrySummary: React.FC<QuickEntrySummaryProps> = ({ data }) =>
                 : 'bg-amber-100 text-amber-900 border border-amber-300'
             }`}
           >
-            {isConfirmed ? '✓ Данные верифицированы' : '⏳ В процессе сбора данных'}
+            {isConfirmed ? (data.editorialSections ? '✓ Основной способ въезда подтверждён' : '✓ Данные верифицированы') : '⏳ В процессе сбора данных'}
           </span>
         </div>
 

@@ -1,4 +1,5 @@
 import type { CountryPageData } from '../../types/country-page';
+import { p1CountryData } from './p1-19';
 import registryData from '../coverage-registry.json';
 import mapPathsData from '../africa-map-paths.json';
 
@@ -18,6 +19,7 @@ import { equatorialGuineaData } from './equatorial-guinea';
 import { angolaData } from './angola';
 
 const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {
+  ...p1CountryData,
   gabon: gabonData,
   ghana: ghanaData,
   kenya: kenyaData,
@@ -38,6 +40,9 @@ export function getCountryData(slug: string): CountryPageData | null {
   if (HARDCODED_COUNTRIES[slug]) {
     return HARDCODED_COUNTRIES[slug];
   }
+
+  // High-risk unresolved countries: do not expose inferred placeholder requirements as advice.
+  if (['cameroon','madagascar','somalia','chad'].includes(slug)) return null;
 
   // Generate clean, dignified placeholder skeleton from registry data for unpublished countries
   const regItem = registryData.find((r) => r.slug === slug);
