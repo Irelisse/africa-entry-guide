@@ -209,29 +209,6 @@ export const CountryPage: React.FC<CountryPageProps> = ({ slug, onBack }) => {
               <OfficialContactsAndSources data={data} />
             </div>
           )}
-
-          {data.editorialSections && (activeTab === 'all' || activeTab === 'contacts_sources') && (
-            <section id="full-country-record" className="my-8">
-              <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#17201c] mb-3">
-                Полная редакционная карточка
-              </h2>
-              <p className="text-sm text-[#6a736d] mb-4">
-                Основной туристический маршрут подтверждён. Неустановленные условия отмечены в разделах ниже.
-              </p>
-              <div className="space-y-2">
-                {data.editorialSections.map((section) => (
-                  <details key={section.number} className="bg-[#fffdf8] border border-[rgba(23,32,28,0.14)] rounded-xl p-4">
-                    <summary className="cursor-pointer font-semibold text-[#17382f] text-sm">
-                      {section.number}. {section.title}
-                    </summary>
-                    <div className="mt-3 text-sm leading-relaxed whitespace-pre-line break-words text-[#17201c]/90">
-                      {section.body}
-                    </div>
-                  </details>
-                ))}
-              </div>
-            </section>
-          )}
         </div>
       </div>
     </article>

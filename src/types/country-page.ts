@@ -134,9 +134,11 @@ export interface OfficialContact {
   city?: string;
   address?: string;
   phone?: string;
+  emergencyPhone?: string;
   email?: string;
   website?: string;
   workingHours?: string;
+  notes?: string;
 }
 
 export interface OfficialSource {

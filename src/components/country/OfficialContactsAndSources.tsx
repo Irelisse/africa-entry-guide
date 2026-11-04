@@ -121,9 +121,28 @@ export const OfficialContactsAndSources: React.FC<ContactsAndSourcesProps> = ({ 
                   )}
                 </div>
 
+                {c.emergencyPhone && (
+                  <div className="pt-1">
+                    <a
+                      href={`tel:${c.emergencyPhone.replace(/[^0-9+]/g, '')}`}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-50 text-rose-900 border border-rose-200 hover:bg-rose-900 hover:text-white transition font-semibold text-xs shadow-2xs"
+                      title="Экстренная связь для граждан РФ"
+                    >
+                      <span>🚨 Дежурный консул:</span>
+                      <span>{c.emergencyPhone}</span>
+                    </a>
+                  </div>
+                )}
+
                 {c.workingHours && (
                   <p className="text-[11px] text-[#6a736d] italic pt-0.5">
                     Часы приёма: {c.workingHours}
+                  </p>
+                )}
+
+                {c.notes && (
+                  <p className="text-[11px] text-[#6a736d] italic pt-0.5">
+                    {c.notes}
                   </p>
                 )}
               </div>
