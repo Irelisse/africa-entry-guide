@@ -20,10 +20,10 @@ export const rwandaData: CountryPageData = {
     "visaStatusRu": "Виза по прибытии",
     "shortDescriptionRu": "Туристическая виза V1 на границе (включая Kigali и сухопутные КПП) или предварительная электронная подача на Irembo. Региональная East Africa Tourist Visa — отдельный продукт.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Туристическая виза V1 по прибытии"
     ],
     "maxStay": "Посольство: V1 однократная, 30 дней. Национальное ведомство: отдельная многократная визовая категория действует до 90 дней; не смешивать с V1 или East Africa Tourist Visa.",
-    "feeFrom": "См. тарифы в разделе 2",
+    "feeFrom": "от 50 USD",
     "passportValidity": "Посольство: паспорт не менее 6 месяцев с даты въезда.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const rwandaData: CountryPageData = {
   "routes": [
     {
       "id": "p1-rw",
-      "name": "Основной туристический маршрут",
+      "name": "Туристическая виза V1 по прибытии",
       "routeType": "visa_on_arrival",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -39,8 +39,8 @@ export const rwandaData: CountryPageData = {
       "validity": "По выданному разрешению / праву въезда",
       "entries": "unknown",
       "fee": {
-        "amount": "Уточняется по виду продукта",
-        "currency": "",
+        "amount": 50,
+        "currency": "USD",
         "paymentMethod": "См. раздел о сборах",
         "note": "Посольство: V1 однократная, 30 дней. Национальное ведомство: отдельная многократная визовая категория действует до 90 дней; не смешивать с V1 или East Africa Tourist Visa.\n\nСборы и способы оплаты. V1 single 50 USD, оплата наличными или картой на границе; общий государственный тариф multiple 70 USD по соответствующей категории.\n\nНе смешивать: срок действия визового документа, срок нахождения на территории, число въездов, дату начала действия и срок подачи анкеты."
       },

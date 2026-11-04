@@ -20,10 +20,10 @@ export const zambiaData: CountryPageData = {
     "visaStatusRu": "Виза по прибытии",
     "shortDescriptionRu": "Обычному гражданину РФ доступна однократная виза по прибытии либо предварительная eVisa. Дополнительно доступна KAZA UNIVISA для Замбии и Зимбабве.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Виза по прибытии (single), eVisa или KAZA"
     ],
     "maxStay": "Посольство: обычная VOA single до 90 дней суммарно за 12 месяцев. KAZA действует до 30 дней, допускает многократные пересечения Замбия–Зимбабве, при соблюдении перечня пунктов въезда.",
-    "feeFrom": "См. тарифы в разделе 2",
+    "feeFrom": "от 50 USD",
     "passportValidity": "Посольство: минимум 6 месяцев от въезда и 2 полностью свободные страницы; национальная иммиграционная служба указывает 3 страницы, поэтому рекомендуется запас 3.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const zambiaData: CountryPageData = {
   "routes": [
     {
       "id": "p1-zm",
-      "name": "Основной туристический маршрут",
+      "name": "Виза по прибытии (single), eVisa или KAZA",
       "routeType": "visa_on_arrival",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -39,8 +39,8 @@ export const zambiaData: CountryPageData = {
       "validity": "По выданному разрешению / праву въезда",
       "entries": "unknown",
       "fee": {
-        "amount": "Уточняется по виду продукта",
-        "currency": "",
+        "amount": 50,
+        "currency": "USD",
         "paymentMethod": "См. раздел о сборах",
         "note": "Посольство: обычная VOA single до 90 дней суммарно за 12 месяцев. KAZA действует до 30 дней, допускает многократные пересечения Замбия–Зимбабве, при соблюдении перечня пунктов въезда.\n\nСборы и способы оплаты. Посольство: single VOA 50 USD; multiple eVisa 80 USD (подать заранее), KAZA UNIVISA 50 USD. Для иных категорий брать сумму официального кабинета.\n\nНе смешивать: срок действия визового документа, срок нахождения на территории, число въездов, дату начала действия и срок подачи анкеты."
       },
@@ -73,7 +73,7 @@ export const zambiaData: CountryPageData = {
   "passport": {
     "validityRequirement": "Посольство: минимум 6 месяцев от въезда и 2 полностью свободные страницы; национальная иммиграционная служба указывает 3 страницы, поэтому рекомендуется запас 3.",
     "validityFrom": "unknown",
-    "blankPagesRequired": null,
+    "blankPagesRequired": 2,
     "biometricOnly": null,
     "retainedByEmbassy": null
   },

@@ -20,10 +20,10 @@ export const mozambiqueData: CountryPageData = {
     "visaStatusRu": "Электронное разрешение (eVisa / eTA)",
     "shortDescriptionRu": "Российские обычные паспорта включены в национальную 30-дневную туристическую программу освобождения с обязательным предварительным разрешением через evisa.gov.mz.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Безвизовый въезд с обязательной предварительной eTA"
     ],
     "maxStay": "До 30 дней пребывания, по заявленным условиям возможно продление на дополнительные 30 дней при обосновании. Право на продление не автоматическое.",
-    "feeFrom": "См. тарифы в разделе 2",
+    "feeFrom": "Сбор eTA уточняется",
     "passportValidity": "Действующий обычный паспорт; минимальный остаток и число пустых страниц нужно считать по текущему национальному порталу и визовому условию.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const mozambiqueData: CountryPageData = {
   "routes": [
     {
       "id": "p1-mz",
-      "name": "Основной туристический маршрут",
+      "name": "Безвизовый въезд с обязательной предварительной eTA",
       "routeType": "eta",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -39,7 +39,7 @@ export const mozambiqueData: CountryPageData = {
       "validity": "По выданному разрешению / праву въезда",
       "entries": "unknown",
       "fee": {
-        "amount": "Уточняется по виду продукта",
+        "amount": "Уточняется (eTA)",
         "currency": "",
         "paymentMethod": "См. раздел о сборах",
         "note": "До 30 дней пребывания, по заявленным условиям возможно продление на дополнительные 30 дней при обосновании. Право на продление не автоматическое.\n\nСборы и способы оплаты. Оформление предварительного электронного разрешения может сопровождаться платой/сервисным сбором; точную сумму следует показать с национального портала при заявке, не выдавать старую консульскую цену за текущий eTA-тариф.\n\nНе смешивать: срок действия визового документа, срок нахождения на территории, число въездов, дату начала действия и срок подачи анкеты."
@@ -137,7 +137,7 @@ export const mozambiqueData: CountryPageData = {
       "organization": "mozambiquehighcommission.org.uk",
       "url": "https://mozambiquehighcommission.org.uk/visa-section.html",
       "dateChecked": "2026-11-04",
-      "reliability": "primary_official"
+      "reliability": "verified_secondary"
     }
   ],
   "verification": {

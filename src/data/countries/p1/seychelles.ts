@@ -20,10 +20,10 @@ export const seychellesData: CountryPageData = {
     "visaStatusRu": "Безвизовый въезд",
     "shortDescriptionRu": "Безвизовый туристический въезд с предварительным обязательным Travel Authorisation (TA); по двустороннему режиму для РФ ориентир до 30 дней.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Безвизовый режим + обязательное Travel Authorisation"
     ],
     "maxStay": "Безвизовая договорённость для граждан РФ 30 дней. Общая национальная программа Visitor Permit может выдавать до трёх месяцев, но это не автоматическое право на 90 дней при въезде по российскому соглашению.",
-    "feeFrom": "0 (визовый сбор)",
+    "feeFrom": "Виза бесплатно; TA отдельно (от 10,90 EUR)",
     "passportValidity": "Офис почётного консула: паспорт действует весь период пребывания и на дату возвращения.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const seychellesData: CountryPageData = {
   "routes": [
     {
       "id": "p1-sc",
-      "name": "Основной туристический маршрут",
+      "name": "Безвизовый режим + обязательное Travel Authorisation",
       "routeType": "visa_free",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",

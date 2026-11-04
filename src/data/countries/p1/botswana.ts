@@ -20,10 +20,10 @@ export const botswanaData: CountryPageData = {
     "visaStatusRu": "Безвизовый въезд",
     "shortDescriptionRu": "Безвизовый въезд для владельцев обычных российских паспортов на основании соглашения РФ–Ботсвана 2019 года.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Безвизовый туристический въезд"
     ],
     "maxStay": "Не более 30 дней за поездку; совокупно 90 дней за каждые 180 дней. Более длинная отметка офицера не отменяет лимит соглашения без специального основания.",
-    "feeFrom": "0 (визовый сбор)",
+    "feeFrom": "Без визового сбора",
     "passportValidity": "По предыдущему исследованию паспорт минимум 6 месяцев на момент въезда; точный отсчёт проверить при изменении маршрута.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const botswanaData: CountryPageData = {
   "routes": [
     {
       "id": "p1-bw",
-      "name": "Основной туристический маршрут",
+      "name": "Безвизовый туристический въезд",
       "routeType": "visa_free",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -144,7 +144,7 @@ export const botswanaData: CountryPageData = {
       "organization": "gov.bw",
       "url": "https://gov.bw/visa-applications/visa-application-visitors-visa",
       "dateChecked": "2026-11-04",
-      "reliability": "primary_official"
+      "reliability": "verified_secondary"
     },
     {
       "title": "Источник 4",

@@ -20,10 +20,10 @@ export const southAfricaData: CountryPageData = {
     "visaStatusRu": "Безвизовый въезд",
     "shortDescriptionRu": "Безвизовый туризм для граждан РФ до 90 дней при соблюдении пограничных условий.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Безвизовый туристический въезд"
     ],
     "maxStay": "До 90 дней без визы; накопительный лимит 90/360 в российском справочнике отдельно не приравнивать к автоматическому продлению при повторном пересечении границы.",
-    "feeFrom": "0 (визовый сбор)",
+    "feeFrom": "Без визового сбора",
     "passportValidity": "По южноафриканским правилам минимум 30 дней после даты выезда и две чистые обычные страницы.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const southAfricaData: CountryPageData = {
   "routes": [
     {
       "id": "p1-za",
-      "name": "Основной туристический маршрут",
+      "name": "Безвизовый туристический въезд",
       "routeType": "visa_free",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -73,7 +73,7 @@ export const southAfricaData: CountryPageData = {
   "passport": {
     "validityRequirement": "По южноафриканским правилам минимум 30 дней после даты выезда и две чистые обычные страницы.",
     "validityFrom": "unknown",
-    "blankPagesRequired": null,
+    "blankPagesRequired": 2,
     "biometricOnly": null,
     "retainedByEmbassy": null
   },

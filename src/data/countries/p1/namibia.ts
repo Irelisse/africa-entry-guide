@@ -20,10 +20,10 @@ export const namibiaData: CountryPageData = {
     "visaStatusRu": "Безвизовый въезд",
     "shortDescriptionRu": "Безвизовый туристический въезд россиян до 90 дней по двустороннему режиму.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Безвизовый туристический въезд"
     ],
     "maxStay": "Посольство в Москве прямо: 90 дней без визы. Правительство Намибии в общей таблице также сообщает о максимуме 3 месяца в календарный год, но это не отменяет специального письма; для повторных поездок считать остаток с осторожностью.",
-    "feeFrom": "0 (визовый сбор)",
+    "feeFrom": "Без визового сбора",
     "passportValidity": "Посольство: не менее 6 месяцев действительности и 3 свободные страницы.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const namibiaData: CountryPageData = {
   "routes": [
     {
       "id": "p1-na",
-      "name": "Основной туристический маршрут",
+      "name": "Безвизовый туристический въезд",
       "routeType": "visa_free",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -73,7 +73,7 @@ export const namibiaData: CountryPageData = {
   "passport": {
     "validityRequirement": "Посольство: не менее 6 месяцев действительности и 3 свободные страницы.",
     "validityFrom": "unknown",
-    "blankPagesRequired": null,
+    "blankPagesRequired": 3,
     "biometricOnly": null,
     "retainedByEmbassy": null
   },
@@ -97,7 +97,7 @@ export const namibiaData: CountryPageData = {
       "requiredFromRiskCountries": null,
       "note": "Посольство прямо требует Health/Travel insurance; жёлтая лихорадка условно по транзиту/маршруту через эндемичные страны."
     },
-    "medicalInsuranceRequired": null,
+    "medicalInsuranceRequired": true,
     "notes": "Посольство прямо требует Health/Travel insurance; жёлтая лихорадка условно по транзиту/маршруту через эндемичные страны."
   },
   "departureChecklist": [

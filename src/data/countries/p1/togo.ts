@@ -20,10 +20,10 @@ export const togoData: CountryPageData = {
     "visaStatusRu": "Электронное разрешение (eVisa / eTA)",
     "shortDescriptionRu": "Обязательная туристическая eVisa до прибытия на государственном портале Togo Voyage; Россия не включена в перечень стран освобождения.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Туристическая eVisa через Togo Voyage"
     ],
     "maxStay": "Туристические продукты 1–15 дней single/multi, 16–30 дней multi и 31–90 дней multi; допустимое пребывание соответствует выбранному продукту/выданной визе.",
-    "feeFrom": "См. тарифы в разделе 2",
+    "feeFrom": "от 25 000 XOF",
     "passportValidity": "Государственный список: копии первых трёх страниц; паспорт действителен на три месяца дольше запрашиваемого срока визы.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const togoData: CountryPageData = {
   "routes": [
     {
       "id": "p1-tg",
-      "name": "Основной туристический маршрут",
+      "name": "Туристическая eVisa через Togo Voyage",
       "routeType": "evisa",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -39,8 +39,8 @@ export const togoData: CountryPageData = {
       "validity": "По выданному разрешению / праву въезда",
       "entries": "unknown",
       "fee": {
-        "amount": "Уточняется по виду продукта",
-        "currency": "",
+        "amount": 25000,
+        "currency": "XOF",
         "paymentMethod": "См. раздел о сборах",
         "note": "Туристические продукты 1–15 дней single/multi, 16–30 дней multi и 31–90 дней multi; допустимое пребывание соответствует выбранному продукту/выданной визе.\n\nСборы и способы оплаты. 25 000 XOF за 1–15 дней single; 35 000 XOF за 1–15 дней multiple; 45 000 XOF за 16–30 дней multiple; 65 000 XOF за 31–90 дней multiple. Доплаты за срочную обработку возможны в действующей форме.\n\nНе смешивать: срок действия визового документа, срок нахождения на территории, число въездов, дату начала действия и срок подачи анкеты."
       },

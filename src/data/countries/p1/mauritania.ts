@@ -20,10 +20,10 @@ export const mauritaniaData: CountryPageData = {
     "visaStatusRu": "Электронное разрешение (eVisa / eTA)",
     "shortDescriptionRu": "Въезд по eVisa через государственную ANRPTS; посольство Мавритании в Москве прямо направило россиянина на электронный портал.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Туристическая eVisa через ANRPTS"
     ],
     "maxStay": "Государственный портал ANRPTS предлагает 30, 90 и 360 дней; МИД РФ также описывает категорию 720 дней. Каждый срок относится к выбранному визовому продукту, не следует автоматически считать его максимальным непрерывным пребыванием.",
-    "feeFrom": "См. тарифы в разделе 2",
+    "feeFrom": "от 60 USD (либо 55 EUR)",
     "passportValidity": "Государственный процедурный реестр: минимум 6 месяцев действительности. Дата отсчёта и число чистых страниц требуют проверки по анкете.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const mauritaniaData: CountryPageData = {
   "routes": [
     {
       "id": "p1-mr",
-      "name": "Основной туристический маршрут",
+      "name": "Туристическая eVisa через ANRPTS",
       "routeType": "evisa",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -39,8 +39,8 @@ export const mauritaniaData: CountryPageData = {
       "validity": "По выданному разрешению / праву въезда",
       "entries": "unknown",
       "fee": {
-        "amount": "Уточняется по виду продукта",
-        "currency": "",
+        "amount": 60,
+        "currency": "USD",
         "paymentMethod": "См. раздел о сборах",
         "note": "Государственный портал ANRPTS предлагает 30, 90 и 360 дней; МИД РФ также описывает категорию 720 дней. Каждый срок относится к выбранному визовому продукту, не следует автоматически считать его максимальным непрерывным пребыванием.\n\nСборы и способы оплаты. МИД РФ по действующей государственной схеме: 30 дней $60 / €55; 90 дней $100 / €95; 360 дней $200 / €190; 720 дней $845 / €810. Госпошлина уплачивается ПО ПРИБЫТИИ после предварительного электронного оформления, возможны отдельные комиссии. Конкретную выбранную категорию подтвердить в выданном документе.\n\nНе смешивать: срок действия визового документа, срок нахождения на территории, число въездов, дату начала действия и срок подачи анкеты."
       },
@@ -151,7 +151,7 @@ export const mauritaniaData: CountryPageData = {
       "organization": "exteriores.gob.es",
       "url": "https://exteriores.gob.es/Embajadas/nouakchott/es/Comunicacion/Noticias/Paginas/Articulos/20250116_NOT2.aspx",
       "dateChecked": "2026-11-04",
-      "reliability": "primary_official"
+      "reliability": "verified_secondary"
     }
   ],
   "verification": {

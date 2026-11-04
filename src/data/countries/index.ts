@@ -41,6 +41,9 @@ export function getCountryData(slug: string): CountryPageData | null {
     return HARDCODED_COUNTRIES[slug];
   }
 
+  // High-risk unresolved countries: do not expose inferred placeholder requirements as advice.
+  if (['cameroon','madagascar','somalia','chad'].includes(slug)) return null;
+
   // Generate clean, dignified placeholder skeleton from registry data for unpublished countries
   const regItem = registryData.find((r) => r.slug === slug);
   if (!regItem) return null;

@@ -20,10 +20,10 @@ export const tanzaniaData: CountryPageData = {
     "visaStatusRu": "Виза по прибытии",
     "shortDescriptionRu": "Туристическая ordinary visa: eVisa до поездки либо VOA по прибытии на разрешённых КПП, граждане РФ могут пользоваться обычной туристической категорией.",
     "availableRoutesList": [
-      "Основной туристический маршрут"
+      "Туристическая ordinary visa / VOA"
     ],
     "maxStay": "Ordinary single до 90 дней по национальному руководству; действительность конкретного документа и разрешённое пребывание проверяются по визе.",
-    "feeFrom": "См. тарифы в разделе 2",
+    "feeFrom": "50 USD + обязательная страховка",
     "passportValidity": "Паспорт не менее 6 месяцев по государственному визовому руководству; рекомендуется 1–2 свободные страницы по конкретному каналу.",
     "lastVerifiedDate": "4 ноября 2026",
     "confidence": "mostly_confirmed"
@@ -31,7 +31,7 @@ export const tanzaniaData: CountryPageData = {
   "routes": [
     {
       "id": "p1-tz",
-      "name": "Основной туристический маршрут",
+      "name": "Туристическая ordinary visa / VOA",
       "routeType": "visa_on_arrival",
       "availableForRussianCitizens": true,
       "purpose": "Туризм, обычный загранпаспорт РФ",
@@ -39,8 +39,8 @@ export const tanzaniaData: CountryPageData = {
       "validity": "По выданному разрешению / праву въезда",
       "entries": "unknown",
       "fee": {
-        "amount": "Уточняется по виду продукта",
-        "currency": "",
+        "amount": 50,
+        "currency": "USD",
         "paymentMethod": "См. раздел о сборах",
         "note": "Ordinary single до 90 дней по национальному руководству; действительность конкретного документа и разрешённое пребывание проверяются по визе.\n\nСборы и способы оплаты. Обычная туристическая виза 50 USD, отдельная транзитная 30 USD. Обязательная государственная inbound travel insurance дополнительно 44 USD для взрослого, действующая до 92 дней.\n\nНе смешивать: срок действия визового документа, срок нахождения на территории, число въездов, дату начала действия и срок подачи анкеты."
       },
@@ -97,7 +97,7 @@ export const tanzaniaData: CountryPageData = {
       "requiredFromRiskCountries": null,
       "note": "С 01.10.2026 ОБЯЗАТЕЛЬНА государственная въездная страховка: первый въезд через материк — NIC, через Занзибар — ZIC, один полис на поездку материк+острова. Частная страховка не заменяет государственную. Жёлтая лихорадка — по рисковому транзиту."
     },
-    "medicalInsuranceRequired": null,
+    "medicalInsuranceRequired": true,
     "notes": "С 01.10.2026 ОБЯЗАТЕЛЬНА государственная въездная страховка: первый въезд через материк — NIC, через Занзибар — ZIC, один полис на поездку материк+острова. Частная страховка не заменяет государственную. Жёлтая лихорадка — по рисковому транзиту."
   },
   "departureChecklist": [
@@ -144,14 +144,14 @@ export const tanzaniaData: CountryPageData = {
       "organization": "zic.co.tz",
       "url": "https://zic.co.tz/2026/10/07/public-notice-clarification-on-the-implementation-of-mandatoryinbound-travel-insurance-for-foreign-visitors-enteringzanzibar-and-tanzania-mainland",
       "dateChecked": "2026-11-04",
-      "reliability": "primary_official"
+      "reliability": "verified_secondary"
     },
     {
       "title": "Источник 4",
       "organization": "inbound.nicinsurance.co.tz",
       "url": "https://inbound.nicinsurance.co.tz/",
       "dateChecked": "2026-11-04",
-      "reliability": "primary_official"
+      "reliability": "verified_secondary"
     },
     {
       "title": "Источник 5",
