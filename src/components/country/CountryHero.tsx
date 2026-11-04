@@ -170,7 +170,7 @@ export const CountryHero: React.FC<CountryHeroProps> = ({ data, onBack }) => {
                   Координаты
                 </span>
                 <span className={`font-mono text-[11px] block ${hasPhoto ? 'text-white/85' : 'text-[#6a736d]'}`}>
-                  {data.coordinates.countryLat.toFixed(2)}°, {data.coordinates.countryLon.toFixed(2)}°
+                  {data.coordinates.countryLat === 0 && data.coordinates.countryLon === 0 ? 'Положение на карте' : `${data.coordinates.countryLat.toFixed(2)}°, ${data.coordinates.countryLon.toFixed(2)}°`}
                 </span>
               </div>
             </div>

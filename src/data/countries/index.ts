@@ -1,4 +1,5 @@
 import type { CountryPageData } from '../../types/country-page';
+import { p1CountryData } from './p1-19';
 import registryData from '../coverage-registry.json';
 import mapPathsData from '../africa-map-paths.json';
 
@@ -18,6 +19,7 @@ import { equatorialGuineaData } from './equatorial-guinea';
 import { angolaData } from './angola';
 
 const HARDCODED_COUNTRIES: Record<string, CountryPageData> = {
+  ...p1CountryData,
   gabon: gabonData,
   ghana: ghanaData,
   kenya: kenyaData,

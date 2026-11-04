@@ -68,11 +68,11 @@ export const DepartureBorderSection: React.FC<DepartureBorderSectionProps> = ({ 
             </h3>
             <div className="space-y-2 text-xs text-[#17201c]/85">
               <p>
-                <strong>Регистрация:</strong> {postEntry.registrationAuthority || 'Не требуется для обычных туристов.'}
+                <strong>Регистрация:</strong> {postEntry.registrationRequired === null ? 'Уточняется' : postEntry.registrationRequired ? (postEntry.registrationAuthority || 'Требуется; подробности уточняются') : 'Не требуется для обычных туристов.'}
               </p>
               <p>
                 <strong>Продление:</strong>{' '}
-                {postEntry.extensionPossible
+                {postEntry.extensionPossible === null ? 'Уточняется' : postEntry.extensionPossible
                   ? `Возможно (${postEntry.extensionMaxDuration || 'по решению миграционной службы'}, сбор ${postEntry.extensionCost || 'уточняется'}).`
                   : 'Продление не предусмотрено.'}
               </p>
@@ -92,8 +92,8 @@ export const DepartureBorderSection: React.FC<DepartureBorderSectionProps> = ({ 
             <div className="space-y-2 text-xs text-[#17201c]/85">
               <p>
                 <strong>Транзитная зона аэропорта:</strong>{' '}
-                {transit.airsideTransitAllowed
-                  ? `Разрешена без визы на срок до ${transit.maxAirsideTransitHours || 24} часов (без выхода в город).`
+                {transit.airsideTransitAllowed === null ? 'Уточняется; не считать транзит разрешённым без проверки' : transit.airsideTransitAllowed
+                  ? `Разрешена без визы${transit.maxAirsideTransitHours != null ? ` на срок до ${transit.maxAirsideTransitHours} часов` : ''} (без выхода в город).`
                   : 'Безвизовый транзит не предусмотрен.'}
               </p>
               {transit.notes && (

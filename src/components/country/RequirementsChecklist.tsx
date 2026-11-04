@@ -103,7 +103,7 @@ export const RequirementsChecklist: React.FC<RequirementsChecklistProps> = ({ da
               <div className="bg-white/80 p-3 rounded-xl border border-[rgba(23,32,28,0.08)]">
                 <span className="text-[#6a736d] block mb-0.5 font-medium">Чистые страницы:</span>
                 <span className="text-sm font-semibold">
-                  Минимум {passport.blankPagesRequired} страницы для визовых отметок
+                  {passport.blankPagesRequired === null ? 'Количество уточняется' : `Минимум ${passport.blankPagesRequired} страницы для визовых отметок`}
                 </span>
               </div>
               {passport.note && (

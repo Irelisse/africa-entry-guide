@@ -1,0 +1,22 @@
+name: P1 data QA
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'scripts/qa-p1.ts'
+      - 'package.json'
+  push:
+    branches: [feature/p1-19-core-release-20261104]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run qa:p1
+      - run: npm run build

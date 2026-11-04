@@ -175,7 +175,7 @@ export const OfficialContactsAndSources: React.FC<ContactsAndSourcesProps> = ({ 
           <div>
             <span className="text-[#6a736d] block text-[11px]">Статус аудита источников:</span>
             <strong className="text-[#17382f] text-sm">
-              Данные верифицированы по официальным правительственным регламентам
+              {data.editorialSections ? 'Основной маршрут подтверждён; отдельные условия могут уточняться' : 'Данные верифицированы по официальным правительственным регламентам'}
             </strong>
           </div>
         </div>

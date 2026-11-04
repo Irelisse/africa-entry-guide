@@ -36,19 +36,21 @@ export const HealthVaccinationSection: React.FC<HealthSectionProps> = ({ health 
               <span className="text-[#6a736d]">При прямом прибытии из РФ:</span>
               <span
                 className={`font-semibold px-2 py-0.5 rounded ${
-                  yellowFever.requiredDirectFromRussia
+                  yellowFever.requiredDirectFromRussia === null
+                    ? 'bg-gray-100 text-gray-700 border border-gray-200'
+                    : yellowFever.requiredDirectFromRussia
                     ? 'bg-rose-100 text-rose-900 border border-rose-200'
                     : 'bg-emerald-100 text-emerald-900'
                 }`}
               >
-                {yellowFever.requiredDirectFromRussia ? 'Обязательно для всех' : 'Не требуется'}
+                {yellowFever.requiredDirectFromRussia === null ? 'Уточняется' : yellowFever.requiredDirectFromRussia ? 'Обязательно для всех' : 'Не требуется'}
               </span>
             </div>
 
             <div className="flex items-center justify-between p-2.5 rounded-xl bg-[#f7f3eb] border border-[rgba(23,32,28,0.08)]">
               <span className="text-[#6a736d]">При въезде из эндемичных стран:</span>
-              <span className="font-semibold text-rose-900 bg-rose-100 px-2 py-0.5 rounded border border-rose-200">
-                Обязательно
+              <span className={yellowFever.requiredFromRiskCountries === null ? 'font-semibold bg-gray-100 text-gray-700 px-2 py-0.5 rounded border border-gray-200' : yellowFever.requiredFromRiskCountries ? 'font-semibold text-rose-900 bg-rose-100 px-2 py-0.5 rounded border border-rose-200' : 'font-semibold bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded'}>
+                {yellowFever.requiredFromRiskCountries === null ? 'Уточняется' : yellowFever.requiredFromRiskCountries ? 'Обязательно' : 'Не требуется'}
               </span>
             </div>
 
